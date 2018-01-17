@@ -10,6 +10,7 @@ class Node {
             next = NULL;
         }
 };
+
 class Solution{
     public:
 
