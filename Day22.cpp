@@ -37,8 +37,12 @@ public:
 
     int getHeight(Node* root) {
         //Write your code here
+        return getDepth(root) - 1;
+    }
+
+    int getDepth(Node* root) {
         if (root == nullptr) return 0;
-        return max(getHeight(root->left), getHeight(root->right));
+        return 1 + max(getDepth(root->left), getDepth(root->right));
     }
 
 }; //End of Solution
