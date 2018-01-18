@@ -43,9 +43,9 @@ int main() {
     int fine;
     if (r->year > e->year) {
     	fine = 10000;
-    } else if (r->month > e->month) {
+    } else if (r->year == e->year && r->month > e->month) {
     	fine = (r->month - e->month) * 500;
-    } else if (r->day > e->day) {
+    } else if (r->month == e->month && r->day > e->day) {
     	fine = (r->day - e->day) * 15;
     } else {
     	fine = 0;
