@@ -4,20 +4,21 @@
 
 using namespace std;
 
-int range(int min, int  max) {
+int range(int min, int max) {
     std::random_device rdev {};
-    static std::default_random_engine e{rdev()};
-    static std::uniform_int_distribution<int> d{min, max};
+    std::default_random_engine e{rdev()};
+    std::uniform_int_distribution<int> d{min, max};
     return d(e);
 }
 
 int main() {
-    int t = range(1, 5);
+    int t = 5;
     cout << t << endl;
 
     for (int m = 0; m < t; m++) {
         int n = range(3, 200);
         int k = range(1, n);
+        // cout << k << " was generated with constraints (1, " << n << ")." << endl;
         vector<int> arr(n);
 
         arr[0] = 0;
